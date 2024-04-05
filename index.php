@@ -34,7 +34,9 @@ get_header()
         <h3> Post Name: <?php the_title(); ?></h3>
         <p> Published on: <?php echo get_the_date(); ?></p>
         <p> By Author: <?php the_author(); ?></p>
+        <a class="page-readmore" href="<?php the_permalink(); ?>"><p>Read More</p></a>
         <hr>
+      
       <?php
       }
       ?>
@@ -42,7 +44,7 @@ get_header()
     </section>
 
     <!-- section 2 -->
-    <!-- when we have to simply fetch posts we use above loop but when we have to fetch any post-type like page then we use below method,if we want to use all pages then we will use -1 , otherwise use the number of how many u want to use,  in associative array we use arrow with equal  -->
+    <!-- when we have to simply fetch posts we use above loop but when we have to fetch any post-type like page then we use below method,if we want to fetch all pages then we will use -1 , otherwise use the number of how many u want to use,  in associative array we use arrow with equal  -->
     <!-- wp_query is class and with class we use new keyword, it will follow the arguments given to it, argument is in form  of array , -->
     <section class="all-pages">
       <h1>All Pages</h1>
@@ -61,7 +63,7 @@ get_header()
         <h3> Post Name: <?php echo get_the_title(); ?></h3>
         <p> Published on: <?php echo get_the_date(); ?></p>
         <p> By Author: <?php echo get_the_author(); ?></p>
-        <a class="page-readmore" href="<?php the_permalink() ?>"><p>Read More</p></a><!-- If you want your user to click on , and move to other side to read that thing, use permalink in anchor ta-->
+        <a class="page-readmore" href="<?php the_permalink(); ?>"><p>Read More</p></a><!-- If you want your user to click on , and move to other side to read that thing, use permalink in anchor ta-->
         <hr>
       <?php }
       ?>

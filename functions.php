@@ -26,6 +26,9 @@ function firstwebsite_theme_features()
 
   //adding function to add logo to our site through site//it is recommended to add function to already created function
   add_theme_support('custom-logo');
+
+  add_theme_support('post-thumbnails'); //to show picture feature in the dashboard post
+
 }
 
 //now we have to call function through add hook

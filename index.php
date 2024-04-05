@@ -32,6 +32,9 @@ get_header()
         the_post()  ?>
 
         <h3> Post Name: <?php the_title(); ?></h3>
+        <div class="post-thumbnail">
+        <?php echo get_the_post_thumbnail(); ?>
+        </div>
         <p> Published on: <?php echo get_the_date(); ?></p>
         <p> By Author: <?php the_author(); ?></p>
         <a class="page-readmore" href="<?php the_permalink(); ?>"><p>Read More</p></a>

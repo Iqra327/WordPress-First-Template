@@ -7,6 +7,7 @@ get_header()
       while (have_posts()) {
         the_post()  ?>
         <div class="blog-div">
+        
         <div class="post-thumbnail">
         <?php echo get_the_post_thumbnail(); ?>
         </div>
@@ -16,7 +17,8 @@ get_header()
         <p> Published on: <?php echo get_the_date(); ?></p>
         <p> By Author: <?php the_author(); ?></p>
         <a class="page-readmore" href="<?php the_permalink(); ?>"><p>Read More</p></a>
-      </div>
+        </div>
+
         </div>
         <hr>        
       <?php
@@ -26,9 +28,10 @@ get_header()
       <div class="pagination"> 
       <?php echo get_the_posts_pagination(); ?>
       </div>
-      
-
+    
 </div>
+
+
 
 
   <?php

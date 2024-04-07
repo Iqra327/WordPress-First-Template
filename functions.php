@@ -36,3 +36,20 @@ function firstwebsite_theme_features()
 add_action('after_setup_theme', 'firstwebsite_theme_features');
 
 //after_setup_theme means that menus should register after theme is loaded 
+
+
+//how to register widgets area in dashboard apearence, register sidebar
+
+//register_sidebar is a function to register sidebar and we pass arguments  in it in the form of array, name is the name to appear on website , it can have space in it , and id is used to call it and it can't have space in it
+
+//we assign it class to apply css on , we assign it class in/by section, before_widget means that before widget is add there is a section of class to apply css . and after_widget means that section ends after the widget is created . you can use section or div to assign class
+function website_sidebars(){
+  register_sidebar(array(
+    'name' => ('Sidebar 1'),
+    'id'  => 'sidebar-1',
+    'before_widget' => '<section id="first-sidebar" class="sidebar1">',
+    'after_widget' => '</section>,'
+  ));
+}
+
+add_action('widgets_init', 'website_sidebars');

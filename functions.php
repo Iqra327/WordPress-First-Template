@@ -43,6 +43,9 @@ add_action('after_setup_theme', 'firstwebsite_theme_features');
 //register_sidebar is a function to register sidebar and we pass arguments  in it in the form of array, name is the name to appear on website , it can have space in it , and id is used to call it and it can't have space in it
 
 //we assign it class to apply css on , we assign it class in/by section, before_widget means that before widget is add there is a section of class to apply css . and after_widget means that section ends after the widget is created . you can use section or div to assign class
+
+//we also call this function where we want to use it 
+
 function website_sidebars(){
   register_sidebar(array(
     'name' => ('Sidebar 1'),

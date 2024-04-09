@@ -237,9 +237,9 @@ get_header()
   </div>
   <!-- adding sidebar -->
 <!-- dynamic_sidebar is a function to call sidebar here, and sidebar-1 is the id we assign to it -->
-  <div class="">
+  <div class="sidebar">
   <?php dynamic_sidebar('sidebar-1'); ?>
   </div>
   <?php
   get_footer()
-  ?>
+  ?> 
